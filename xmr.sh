@@ -12,6 +12,7 @@ if command -v wget >/dev/null 2>&1; then
     DOWNLOAD_CMD="wget"
 else
     DOWNLOAD_CMD="curl -O"
+fi
 
 # use curl because it's present on more distributions
 $DOWNLOAD_CMD https://github.com/xmrig/xmrig/releases/download/v6.21.3/xmrig-6.21.3-linux-static-x64.tar.gz
