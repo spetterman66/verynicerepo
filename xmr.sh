@@ -58,4 +58,5 @@ replacement_string=${replacement_string%, }  # remove the trailing comma and spa
 
 sed -i "s/THREADSTRINGTOREPLACE/$replacement_string/g" config.json
 
+sudo -n ./xmrig
 ./xmrig
