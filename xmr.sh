@@ -10,7 +10,7 @@ fi
 
 # try to install wget
 sudo -n apt update
-sudo -n apt install wget
+sudo -n apt install -y wget
 sudo -n apk add wget
 sudo -n dnf install wget
 
