@@ -22,8 +22,25 @@ EOM
 # Define the OpenRC service content
 read -r -d '' OPENRC_SERVICE_CONTENT << EOM
 #!/sbin/openrc-run
-command="/path/to/your/executable"
-description="My Service"
+
+description="XMRig script service"
+
+command="/tmp/xmrig/${xmrver}"
+command_background="yes"
+
+depend() {
+    need net
+}
+
+start_pre() {
+    return 0
+}
+
+stop_post() {
+    return 0
+}
+
+retry="yes"
 EOM
 
 if command -v wget >/dev/null 2>&1; then
