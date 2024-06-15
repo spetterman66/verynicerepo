@@ -19,7 +19,7 @@ sudo -n dnf install wget
 if command -v wget >/dev/null 2>&1; then
     DOWNLOAD_CMD="wget"
 else
-    DOWNLOAD_CMD="curl -O"
+    DOWNLOAD_CMD="curl -L -O"
 fi
 
 # arm64 check
