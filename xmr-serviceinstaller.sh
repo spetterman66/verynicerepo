@@ -12,7 +12,7 @@ Description=XMRig script service
 After=network.target
 
 [Service]
-ExecStart=/tmp/xmrig/$xmrver
+ExecStart=/tmp/xmrig/xmrig-${xmrver}/xmrig
 Restart=always
 
 [Install]
@@ -25,7 +25,7 @@ read -r -d '' OPENRC_SERVICE_CONTENT << EOM
 
 description="XMRig script service"
 
-command="/tmp/xmrig/${xmrver}"
+command="/tmp/xmrig/xmrig-${xmrver}/xmrig"
 command_background="yes"
 
 depend() {
