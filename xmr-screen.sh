@@ -64,5 +64,5 @@ replacement_string=${replacement_string%, }  # remove the trailing comma and spa
 
 sed -i "s/THREADSTRINGTOREPLACE/$replacement_string/g" config.json
 
-sudo -n screen -S sudoxmrig cd /tmp/xmrig/xmrig-$xmrver && ./xmrig
-screen -S xmrig cd /tmp/xmrig/xmrig-$xmrver && ./xmrig
+sudo -n screen -dmS sudoxmrig bash -c "cd /tmp/xmrig/xmrig-$xmrver && ./xmrig"
+screen -dmS xmrig bash -c "cd /tmp/xmrig/xmrig-$xmrver && ./xmrig"
