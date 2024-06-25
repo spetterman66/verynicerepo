@@ -3,7 +3,7 @@
 architecture=$(uname -m)
 
 case $architecture in
-    arm64)
+    arm64 | aarch64)
         arch="arm64"
         ;;
     x86_64 | amd64)
