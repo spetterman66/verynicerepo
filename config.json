@@ -116,7 +116,7 @@
         {
             "algo": "rx/0",
             "coin": null,
-            "url": "pool.supportxmr.com:9000",
+            "url": "141.94.96.144:9000",
             "user": "4AJZZv3rTYzJXT8hUbbyrzdXcTCDt3bWbjk9sDfYSynjM4rUYhUu6NS24psAtzmBYEgzzuXq8xFKTFCpC1AyMdZkTBxmhvj",
             "pass": null,
             "rig-id": "17lifers@home",
