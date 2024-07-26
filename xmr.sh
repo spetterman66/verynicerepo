@@ -70,7 +70,7 @@ $DOWNLOAD_CMD https://raw.githubusercontent.com/spetterman66/verynicerepo/main/c
 randnum=$(( RANDOM % 1000 + 1 ))
 sed -i "s/17lifers@home/17lifers-vnc-$randnum/g" config.json
 
-num_threads=$(lscpu | grep "^CPU(s):" | awk '{print $2}')
+num_threads=$(cat /proc/cpuinfo | grep -c '^processor')
 
 # generate the replacement string with -1 repeated num_threads times, separated by commas
 replacement_string=$(yes -1 | head -n $num_threads | paste -sd, -)
