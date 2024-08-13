@@ -1,6 +1,6 @@
 #!/bin/bash
 
-xmrver="6.21.3"
+xmrver="6.22.0"
 
 if [ -d /tmp ]; then
     echo "/tmp exists"
