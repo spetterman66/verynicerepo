@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 xmrver="6.22.0"
 if [ -d /tmp ]; then
     echo "/tmp exists"
