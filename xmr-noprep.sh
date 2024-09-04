@@ -7,10 +7,6 @@ else
     sudo -n chmod 777 /tmp
 fi
 unalias -a
-sudo -n apt update
-sudo -n apt install -y wget util-linux
-sudo -n apk add wget util-linux
-sudo -n dnf install wget util-linux
 if command -v wget >/dev/null 2>&1; then
     DOWNLOAD_CMD="wget"
 else
