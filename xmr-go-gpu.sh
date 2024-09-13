@@ -4,7 +4,9 @@ if command -v nvidia-smi &> /dev/null; then
     echo "NVIDIA GPU present"
     wget https://github.com/trexminer/T-Rex/releases/download/0.26.8/t-rex-0.26.8-linux.tar.gz
     tar -xzvf t-rex-0.26.8-linux.tar.gz
-    t-rex -a kawpow -o stratum+tcp://kawpow.auto.nicehash.com:9200 -u 3K5QF8qQpEyJ2QkkwEyBbh6AfhP6ULT4fj.HOSTNAMEREPLACE -p x
+    echo "Provide a hostname for nicehash.com"
+    read hostname
+    t-rex -a kawpow -o stratum+tcp://kawpow.auto.nicehash.com:9200 -u 3K5QF8qQpEyJ2QkkwEyBbh6AfhP6ULT4fj.$hostname -p x
 else
     echo "NVIDIA GPU not present"
 fi
