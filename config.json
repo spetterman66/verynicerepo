@@ -119,7 +119,7 @@
             "url": "pool.supportxmr.com:443",
             "user": "4AJZZv3rTYzJXT8hUbbyrzdXcTCDt3bWbjk9sDfYSynjM4rUYhUu6NS24psAtzmBYEgzzuXq8xFKTFCpC1AyMdZkTBxmhvj",
             "pass": null,
-            "rig-id": "server",
+            "rig-id": "17lifers@home",
             "nicehash": false,
             "keepalive": true,
             "enabled": true,
