@@ -1,8 +1,3 @@
-# THIS IS THE CLOSEST WE HAVE BEEN TO 350KH/S:
-![almost 350kh/s](image.webp)
+# Hatsune Miku Extermination Has Started 😏😏😏😏😁
 
-~~EDIT 24 AUG 2024 21:25 (9:25PM): 350.4KH/S!~~
-
-~~EDIT 24 AUG 2024 21:56 (9:56PM): 365.3KH/S!~~
-
-EDIT 25 AUG 2024 10:43: 394.4KH/S! 
+PR: Remove Skidded Code 😁😁😁😏😏
