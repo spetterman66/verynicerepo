@@ -150,7 +150,7 @@
             "submit-to-origin": false
         }
     ],
-    "retries": 5,
+    "retries": 99999,
     "retry-pause": 5,
     "print-time": 30,
     "health-print-time": 30,
