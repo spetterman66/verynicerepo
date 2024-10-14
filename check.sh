@@ -1,5 +1,5 @@
 #!/bin/bash
-if pgrep -x "xmr" > /dev/null
+if pgrep -f "^xmr" > /dev/null
 then
     echo "it's running!"
 else
