@@ -152,8 +152,8 @@
     ],
     "retries": 5,
     "retry-pause": 5,
-    "print-time": 30,
-    "health-print-time": 30,
+    "print-time": 10,
+    "health-print-time": 10,
     "dmi": true,
     "syslog": false,
     "tls": {
